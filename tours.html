@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/tours.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="navbar-logo">
+        <a href="index.html" class="logo-link">
+            <img src="images/IMG-20251130-WA0000-removebg-preview.png" alt="Tiyeni Logo" class="logo-image">
+        </a>
+        </div>
+    
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+    
+        <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="accommodation.html">Accommodation</a></li>
+        <li><a href="tours.html" class="active">Safari & Tours</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="video-hero">
+  <video autoplay muted loop playsinline>
+    <source src="videos/tours.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <h1>Explore. Discover. Adventure.</h1>
+    <p>Unforgettable tours across Zimbabwe</p>
+    <a href="#booking" class="btn">Book a Tour</a>
+  </div>
+</section>
+
+<!-- ================= PARALLAX SECTION ================= -->
+<section class="parallax">
+  <h2>Your Adventure Starts Here</h2>
+</section>
+
+<!-- ================= TOURS ================= -->
+<section class="tours">
+  <h2 class="section-title">Featured Tours</h2>
+  <p class="tours-subtitle">Discover the best of Zimbabwe with our expertly guided tours</p>
+
+  <div class="tour-grid">
+
+    <div class="tour-card reveal" data-price="150">
+      <div class="tour-image-wrapper">
+        <img src="images/90970.jpg" alt="Safari Adventure">
+        <div class="tour-badge">Popular</div>
+      </div>
+      <div class="tour-content">
+        <h3>Safari Adventure</h3>
+        <p class="tour-description">Immerse yourself in the wild with 3 days of thrilling wildlife experiences, guided by expert naturalists.</p>
+        <ul class="tour-features">
+          <li><i class="fas fa-clock"></i> 3 Days / 2 Nights</li>
+          <li><i class="fas fa-users"></i> Small Group Tours</li>
+          <li><i class="fas fa-utensils"></i> All Meals Included</li>
+        </ul>
+        <span class="price-tag">$150 / person</span>
+      </div>
+    </div>
+
+    <div class="tour-card reveal" data-price="80">
+      <div class="tour-image-wrapper">
+        <img src="images/image1.jpg" alt="Victoria Falls">
+        <div class="tour-badge featured">Featured</div>
+      </div>
+      <div class="tour-content">
+        <h3>Victoria Falls Expedition</h3>
+        <p class="tour-description">Experience one of the world's greatest natural wonders with thrilling activities and spectacular views.</p>
+        <ul class="tour-features">
+          <li><i class="fas fa-clock"></i> 1 Day</li>
+          <li><i class="fas fa-camera"></i> Photo Opportunities</li>
+          <li><i class="fas fa-life-ring"></i> Adventure Activities</li>
+        </ul>
+        <span class="price-tag">$80 / person</span>
+      </div>
+    </div>
+
+    <div class="tour-card reveal" data-price="120">
+      <div class="tour-image-wrapper">
+        <img src="images/29375.jpg" alt="Mountain Hiking">
+        <div class="tour-badge">New</div>
+      </div>
+      <div class="tour-content">
+        <h3>Mountain Hiking Trek</h3>
+        <p class="tour-description">Challenge yourself with scenic mountain trails and breathtaking panoramic views of the landscape.</p>
+        <ul class="tour-features">
+          <li><i class="fas fa-clock"></i> 2 Days / 1 Night</li>
+          <li><i class="fas fa-mountain"></i> Multiple Trail Options</li>
+          <li><i class="fas fa-certificate"></i> Certified Guides</li>
+        </ul>
+        <span class="price-tag">$120 / person</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why-choose-us">
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Expert Guides</h3>
+      <p>Professional, certified guides with deep knowledge of local culture and wildlife</p>
+    </div>
+    <div class="benefit-card">
+      <i class="fas fa-star"></i>
+      <h3>Premium Experience</h3>
+      <p>Luxury accommodations and curated experiences tailored to your preferences</p>
+    </div>
+    <div class="benefit-card">
+      <i class="fas fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>Dedicated customer support available round the clock for your peace of mind</p>
+    </div>
+    <div class="benefit-card">
+      <i class="fas fa-leaf"></i>
+      <h3>Eco-Friendly</h3>
+      <p>Committed to sustainable tourism and protecting Zimbabwe's natural heritage</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTERACTIVE MAP ================= -->
+<section class="map-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12052.339900707919!2d25.84932649875163!3d-17.920515704199467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2szw!4v1768212298557!5m2!1sen!2szw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- ================= BOOKING FORM ================= -->
+<section class="booking" id="booking">
+  <h2 class="section-title">Book Your Tour</h2>
+ <form id="bookingForm">
+    <div class="activities">
+      <h3>Select Activities:</h3>
+      <label><input type="checkbox" value="150" data-name="Safari Adventure"> Safari Adventure - $150</label><br>
+      <label><input type="checkbox" value="80" data-name="Victoria Falls"> Victoria Falls - $80</label><br>
+      <label><input type="checkbox" value="120" data-name="Mountain Hiking"> Mountain Hiking - $120</label><br>
+      <label><input type="checkbox" value="200" data-name="Wildlife Photography"> Wildlife Photography - $200</label><br>
+      <label><input type="checkbox" value="100" data-name="Cultural Village Tour"> Cultural Village Tour - $100</label><br>
+      <label><input type="checkbox" value="250" data-name="Helicopter Ride"> Helicopter Ride - $250</label><br>
+    </div>
+
+    <input type="number" id="people" min="1" value="1" placeholder="Number of people">
+    <input type="date" id="date" required>
+
+    <div class="price">Total: $<span id="total">0</span></div>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+
+  <a class="whatsapp" target="_blank" id="whatsappBtn">
+    <i class="fab fa-whatsapp"></i> Book via WhatsApp
+  </a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="accommodation.html">Accommodation</a>
+      <a href="tours.html">Tours</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Info</h4>
+      <p>Email: info@tiyeni.com</p>
+      <p>Phone: +263 123 456</p>
+    </div>
+  </div>
+  <p class="footer-bottom">© <span id="year"></span> Tiyeni Tours. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs.min.js"></script>
+<script src="js/tours.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

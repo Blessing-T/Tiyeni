@@ -4,27 +4,13 @@
     overflow-x: hidden;
 }
 
-.oleo-script-swash-caps-regular {
-    font-family: "Oleo Script Swash Caps", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .oleo-script-swash-caps-bold {
-    font-family: "Oleo Script Swash Caps", system-ui;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
 h1, h2 {
-    font-family: "Oleo Script Swash Caps", system-ui;
     font-weight: 700;
     font-style: normal;
     font-size: 50px;
 }
 
 h3{
-    font-family: "Oleo Script Swash Caps", system-ui;
     font-weight: 700;
     font-style: normal;
     font-size: 25px;
@@ -258,40 +244,7 @@ h3{
     margin-bottom: 22px;
 }
 
-.offers {
-    display: grid;
-    gap: 24px;
-}
 
-.offer-item {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-}
-
-
-.offer-item {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-.offer-item.rotating-out {
-    transform: translateX(-30px) scale(0.98);
-    opacity: 0;
-}
-
-.offer-image {
-    width: 280px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
-
-.offer-content {
-    background: #e6e6e6;
-    padding: 20px 22px;
-    border-radius: 12px;
-    flex: 1;
-}
 
 .offer-content h3 {
     margin-bottom: 10px;
@@ -713,14 +666,12 @@ p {
 }
 
 
-/* Real image */
 .image.real img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Bouncing animation for What We Offer images */
 .what-we-offer .image img {
   animation: bounce 2s infinite;
 }
@@ -737,7 +688,6 @@ p {
   }
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
@@ -748,7 +698,6 @@ p {
   }
 }
 
-/* Popup Modal Styles */
 .popup-modal {
   display: none;
   position: fixed;
@@ -819,5 +768,119 @@ p {
   to {
     transform: scale(1) translateY(0);
     opacity: 1;
+  }
+}
+
+
+
+.contact-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #333);
+  color: white;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+}
+
+.contact-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.contact-content {
+  padding: 80px 20px;
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.info-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-item i {
+  font-size: 28px;
+  color: #a07b45;
+  min-width: 40px;
+  margin-top: 5px;
+}
+
+.info-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.info-item p {
+  color: #666;
+}
+
+.info-item a {
+  color: #a07b45;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  background: #f8f8f8;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #a07b45;
+  box-shadow: 0 0 5px rgba(160, 123, 69, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 36px;
   }
 }

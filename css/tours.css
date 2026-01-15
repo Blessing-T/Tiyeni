@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.video-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(160, 123, 69, 0.3) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-overlay p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #a07b45 0%, #8a6635 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(160, 123, 69, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(160, 123, 69, 0.6);
+}
+
+.parallax {
+  height: 60vh;
+  background: linear-gradient(rgba(160, 123, 69, 0.6), rgba(0, 0, 0, 0.5)), url("../images/Zambezi%20River%20sunsets%20are%20pretty%20hard%20to%20beat!.jpeg") center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tours {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.tours-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.tour-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.tour-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tour-card:hover img {
+  transform: scale(1.1);
+}
+
+.tour-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #a07b45;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.tour-badge.featured {
+  background: #ff7f00;
+}
+
+.tour-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tour-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1f1f1f;
+  font-weight: 700;
+}
+
+.tour-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.tour-features {
+  list-style: none;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.tour-features li {
+  padding: 8px 0;
+  color: #555;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tour-features i {
+  color: #a07b45;
+  width: 16px;
+}
+
+.price-tag {
+  font-size: 18px;
+  font-weight: bold;
+  color: #a07b45;
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.why-choose-us {
+  padding: 100px 20px;
+  background: white;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+  background: white;
+  border-color: #a07b45;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(160, 123, 69, 0.15);
+}
+
+.benefit-card i {
+  font-size: 40px;
+  color: #a07b45;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.benefit-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1f1f1f;
+}
+
+.benefit-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.map-section {
+  padding: 100px 20px;
+  background: white;
+}
+
+.map-section .section-title {
+  margin-bottom: 50px;
+}
+
+.map-section iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+.booking {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+  color: white;
+}
+
+.booking .section-title {
+  color: white;
+}
+
+.booking form {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(160, 123, 69, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.booking input,
+.booking select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(160, 123, 69, 0.5);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.booking input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.booking input:focus,
+.booking select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #a07b45;
+  box-shadow: 0 0 10px rgba(160, 123, 69, 0.3);
+}
+
+.activities {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.activities h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #a07b45;
+  font-weight: 700;
+}
+
+.activities label {
+  display: block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(160, 123, 69, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  color: white;
+}
+
+.activities label:hover {
+  background: rgba(160, 123, 69, 0.15);
+  border-color: #a07b45;
+  transform: translateX(5px);
+}
+
+.activities label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.activities label::before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a07b45;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.activities label input[type="checkbox"]:checked + *::before {
+  background: #a07b45;
+  border-color: #a07b45;
+  content: '✓';
+}
+
+.price {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #a07b45;
+  font-weight: bold;
+}
+
+.booking button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #a07b45 0%, #8a6635 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.booking button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(160, 123, 69, 0.4);
+}
+
+.booking button:active {
+  transform: translateY(-1px);
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:900px){
+  .tour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px){
+  .tour-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-overlay h1 {
+    font-size: 34px;
+  }
+  
+  .tours {
+    padding: 60px 20px;
+  }
+  
+  .why-choose-us {
+    padding: 60px 20px;
+  }
+  
+  .tour-image-wrapper {
+    height: 200px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 20px; 
+    background-color: transparent;
+   
+    position: relative;
+    z-index: 1000; 
+}
+
+header {
+    background-color: #ffffff59;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    flex-shrink: 0;
+    margin-left: 6px; 
+    overflow: hidden;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    margin-right: 6px; 
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    
+    color: #ff7f00; 
+}
+     
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

@@ -30,67 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const offers = document.querySelector('.offers');
-    if (!offers) return;
-
-    const rotateDelay = 4000;
-
-    function rotateOnce() {
-        const first = offers.querySelector('.offer-item');
-        if (!first) return;
-
-     
-        first.classList.add('rotating-out');
-
-        const cleanup = () => {
-           
-            const clone = first.cloneNode(true);
-           
-            clone.style.transition = 'none';
-            clone.style.transform = 'translateX(30px)';
-            clone.style.opacity = '0';
-            offers.appendChild(clone);
-
-          
-            requestAnimationFrame(() => {
-                clone.style.transition = '';
-                clone.style.transform = '';
-                clone.style.opacity = '';
-            });
-
-          
-            first.remove();
-        };
-
-        
-        const onEnd = (e) => {
-            if (e.target !== first) return;
-            first.removeEventListener('transitionend', onEnd);
-            cleanup();
-        };
-
-        first.addEventListener('transitionend', onEnd);
-
-        
-        setTimeout(() => {
-            if (offers.contains(first)) cleanup();
-        }, 700);
-    }
-
-    let rotateTimer = setInterval(rotateOnce, rotateDelay);
-
-  
-    offers.addEventListener('mouseenter', () => clearInterval(rotateTimer));
-    offers.addEventListener('mouseleave', () => rotateTimer = setInterval(rotateOnce, rotateDelay));
-});
-
-// Popup Modal Functionality
-document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('popup-modal');
     const closeBtn = document.querySelector('.popup-close');
     const popupBody = document.getElementById('popup-body');
     
-    // Content for each popup
     const popupContent = {
         'about': {
             title: 'About Us',
@@ -166,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Add click event listeners to all READ MORE buttons
     document.querySelectorAll('.what-we-offer .btn').forEach((btn, index) => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -179,30 +121,29 @@ document.addEventListener('DOMContentLoaded', function() {
             if (contentKey && popupContent[contentKey]) {
                 popupBody.innerHTML = popupContent[contentKey].content;
                 modal.classList.add('show');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                document.body.style.overflow = 'hidden';
             }
         });
     });
     
-    // Close modal when clicking the close button
     closeBtn.addEventListener('click', function() {
         modal.classList.remove('show');
-        document.body.style.overflow = 'auto'; // Restore scrolling
+        document.body.style.overflow = 'auto';
     });
     
-    // Close modal when clicking outside the content
+
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
             modal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.style.overflow = 'auto';
         }
     });
     
-    // Close modal with Escape key
+
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('show')) {
             modal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.style.overflow = 'auto';
         }
     });
 });

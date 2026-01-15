@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiyeni | Luxury Accommodation</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/accommodation-luxury.css">
+  <link rel="icon" type="image/png" href="images/IMG-20251130-WA0001.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="luxury-header">
+  <nav class="luxury-navbar">
+    <div class="navbar-logo">
+      <a href="index.html" class="logo-link">
+        <img src="images/IMG-20251130-WA0000-removebg-preview.png" alt="Tiyeni Logo" class="logo-image">
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger-menu" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="navbar-menu" id="navbar-menu">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="accommodation.html" class="active">Accommodation</a></li>
+      <li><a href="index.html#tours">Safari & Tours</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="luxury-hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/tiyeni.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-subtitle">LUXURY HOSPITALITY</span>
+      <h1 class="hero-title">Accommodation in Victoria Falls</h1>
+      <p class="hero-description">Experience unparalleled luxury and exquisite amenities in our exquisitely curated suites</p>
+      <a href="#rooms" class="luxury-btn">Explore Suites</a>
+    </div>
+  </section>
+</header>
+
+<section class="luxury-intro">
+  <div class="intro-container">
+    <h2 class="intro-title">Where Elegance Meets Excellence</h2>
+    <p class="intro-text">At Tiyeni, we redefine luxury hospitality. Each suite is meticulously designed to offer a sanctuary of comfort, blending contemporary sophistication with warm African hospitality. Our commitment to excellence ensures every moment of your stay is unforgettable.</p>
+  </div>
+</section>
+
+<section class="luxury-rooms" id="rooms">
+  <div class="rooms-container">
+    <div class="section-header">
+      <h2 class="section-title">Our Suites</h2>
+      <p class="section-subtitle">Discover accommodations crafted for the discerning traveler</p>
+    </div>
+
+    <div class="luxury-rooms-grid">
+      <div class="luxury-room-card">
+        <div class="room-image-container">
+          <img src="images/bed.jpg" alt="Deluxe Suite" class="room-image">
+          <span class="room-badge">Most Popular</span>
+          <div class="room-overlay">
+            <button class="view-details-btn">View Details</button>
+          </div>
+        </div>
+        <div class="room-info">
+          <h3 class="room-title">Deluxe Suite</h3>
+          <p class="room-desc">An elegant sanctuary with premium furnishings and modern elegance. Perfect for those seeking sophistication and comfort.</p>
+          <div class="room-specs">
+            <div class="spec">
+              <i class="fas fa-bed"></i>
+              <span>King Bed</span>
+            </div>
+            <div class="spec">
+              <i class="fas fa-bath"></i>
+              <span>Marble Bath</span>
+            </div>
+            <div class="spec">
+              <i class="fas fa-door-open"></i>
+              <span>Private Patio</span>
+            </div>
+          </div>
+          <ul class="room-amenities">
+            <li><i class="fas fa-check"></i> Premium Egyptian Cotton Linens</li>
+            <li><i class="fas fa-check"></i> Luxury Bath Products</li>
+            <li><i class="fas fa-check"></i> Smart Climate Control</li>
+            <li><i class="fas fa-check"></i> Complimentary Minibar</li>
+            <li><i class="fas fa-check"></i> 24-Hour Room Service</li>
+          </ul>
+          <div class="room-footer">
+            <div class="price-section">
+              <span class="price-from">from</span>
+              <span class="price">$185</span>
+              <span class="price-unit">/night</span>
+            </div>
+            <a href="#booking" class="luxury-btn-secondary">Reserve Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="luxury-room-card featured">
+        <div class="featured-badge">Presidential</div>
+        <div class="room-image-container">
+          <img src="images/flange.jpeg" alt="Presidential Suite" class="room-image">
+          <span class="room-badge premium">Luxury</span>
+          <div class="room-overlay">
+            <button class="view-details-btn">View Details</button>
+          </div>
+        </div>
+        <div class="room-info">
+          <h3 class="room-title">Presidential Suite</h3>
+          <p class="room-desc">Our crown jewel. An expansive two-bedroom luxury sanctuary with panoramic views, offering an unmatched experience of elegance and refinement.</p>
+          <div class="room-specs">
+            <div class="spec">
+              <i class="fas fa-bed"></i>
+              <span>2 King Beds</span>
+            </div>
+            <div class="spec">
+              <i class="fas fa-door-open"></i>
+              <span>Private Entrance</span>
+            </div>
+            <div class="spec">
+              <i class="fas fa-glass-champagne"></i>
+              <span>Lounge Area</span>
+            </div>
+          </div>
+          <ul class="room-amenities">
+            <li><i class="fas fa-check"></i> Separate Living Room</li>
+            <li><i class="fas fa-check"></i> Jacuzzi Bathtub</li>
+            <li><i class="fas fa-check"></i> Panoramic Balcony</li>
+            <li><i class="fas fa-check"></i> Personal Concierge Service</li>
+            <li><i class="fas fa-check"></i> Premium Wine Selection</li>
+            <li><i class="fas fa-check"></i> 24-Hour Valet Service</li>
+          </ul>
+          <div class="room-footer">
+            <div class="price-section">
+              <span class="price-from">from</span>
+              <span class="price">$450</span>
+              <span class="price-unit">/night</span>
+            </div>
+            <a href="#booking" class="luxury-btn-secondary">Reserve Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="luxury-room-card">
+        <div class="room-image-container">
+          <img src="images/29375.jpg" alt="Family Villa" class="room-image">
+          <span class="room-badge">Group Friendly</span>
+          <div class="room-overlay">
+            <button class="view-details-btn">View Details</button>
+          </div>
+        </div>
+        <div class="room-info">
+          <h3 class="room-title">Family Villa</h3>
+          <p class="room-desc">Spacious and sophisticated, designed for families and groups who desire comfort without compromising luxury. Your private escape awaits.</p>
+          <div class="room-specs">
+            <div class="spec">
+              <i class="fas fa-bed"></i>
+              <span>2 King + 2 Queen</span>
+            </div>
+            <div class="spec">
+              <i class="fas fa-shower"></i>
+              <span>2 Bathrooms</span>
+            </div>
+            <div class="spec">
+              <i class="fas fa-utensils"></i>
+              <span>Full Kitchen</span>
+            </div>
+          </div>
+          <ul class="room-amenities">
+            <li><i class="fas fa-check"></i> Living & Dining Areas</li>
+            <li><i class="fas fa-check"></i> Kitchenette</li>
+            <li><i class="fas fa-check"></i> Multiple Private Patios</li>
+            <li><i class="fas fa-check"></i> Kids Amenities</li>
+            <li><i class="fas fa-check"></i> Butler Service</li>
+          </ul>
+          <div class="room-footer">
+            <div class="price-section">
+              <span class="price-from">from</span>
+              <span class="price">$320</span>
+              <span class="price-unit">/night</span>
+            </div>
+            <a href="#booking" class="luxury-btn-secondary">Reserve Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="luxury-amenities">
+  <div class="amenities-container">
+    <h2 class="section-title">World-Class Amenities</h2>
+    <p class="section-subtitle">Experience uncompromising luxury at every turn</p>
+
+    <div class="amenities-showcase">
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-spa"></i>
+        </div>
+        <h3>Spa & Wellness</h3>
+        <p>Indulge in rejuvenating spa treatments and wellness therapies by expert practitioners</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h3>Fine Dining</h3>
+        <p>Savor exquisite cuisine crafted by award-winning chefs using locally sourced ingredients</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-dumbbell"></i>
+        </div>
+        <h3>Fitness Center</h3>
+        <p>Stay fit with state-of-the-art equipment and personalized training sessions</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-wifi"></i>
+        </div>
+        <h3>High-Speed Internet</h3>
+        <p>Stay connected with premium connectivity throughout the property</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-car"></i>
+        </div>
+        <h3>Premium Transfer Service</h3>
+        <p>Enjoy complimentary airport transfers and concierge transportation services</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-concierge-bell"></i>
+        </div>
+        <h3>Concierge Services</h3>
+        <p>Our dedicated team arranges everything from restaurant reservations to exclusive tours</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-person-swimming"></i>
+        </div>
+        <h3>Infinity Pool</h3>
+        <p>Relax by our stunning infinity pool overlooking the Victoria Falls landscape</p>
+      </div>
+
+      <div class="amenity-item">
+        <div class="amenity-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>24/7 Security</h3>
+        <p>Your safety is our priority with round-the-clock security and surveillance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="luxury-features">
+  <div class="features-container">
+    <h2 class="section-title">Why Choose Tiyeni</h2>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-number">01</div>
+        <h3>Unmatched Elegance</h3>
+        <p>Every detail is carefully curated to provide an atmosphere of sophistication and refined taste</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">02</div>
+        <h3>Exceptional Service</h3>
+        <p>Our award-winning staff anticipates your needs and delivers service beyond expectations</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">03</div>
+        <h3>Prime Location</h3>
+        <p>Located in the heart of Victoria Falls with breathtaking views and easy access to attractions</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">04</div>
+        <h3>Sustainability</h3>
+        <p>We are committed to eco-friendly practices while maintaining luxury standards</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">05</div>
+        <h3>Exclusive Experiences</h3>
+        <p>Access curated tours and activities designed for the discerning traveler</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">06</div>
+        <h3>Privacy & Comfort</h3>
+        <p>Your sanctuary awaits with utmost privacy, comfort, and personalized attention</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-cta" id="booking">
+  <div class="cta-content">
+    <h2>Ready for Your Luxurious Escape?</h2>
+    <p>Reserve your suite today and experience the pinnacle of hospitality in Victoria Falls</p>
+    <a href="index.html#contact" class="luxury-btn-main">Contact Reservations</a>
+  </div>
+</section>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <img src="images/image1.jpg" alt="" width="50px">
+      <p>
+        Victoria Falls, Zimbabwe<br>
+        info@tiyeni.com<br>
+        +263 772 443 848
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="accommodation.html">Accommodation</a></li>
+        <li><a href="index.html#tours">Safari & Tours</a></li>
+        <li><a href="index.html#what-we-offer">What We Offer</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon3"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Tiyeni Group — Elegance in every stay
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
