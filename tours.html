@@ -5,12 +5,14 @@
   <title>My Tours</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/tours.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <header>
+    <div class="menu-overlay" id="menu-overlay"></div>
     <nav class="navbar">
         <div class="navbar-logo">
         <a href="index.html" class="logo-link">
@@ -169,32 +171,47 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <img src="images/image1.jpg" alt="" width="50px">
+      <p>
+        Victoria Falls, Zimbabwe<br>
+        info@tiyeni.com<br>
+        +263 772 443 848
+      </p>
+    </div>
+
+    <div class="footer-col">
       <h4>Quick Links</h4>
-      <a href="index.html">Home</a>
-      <a href="accommodation.html">Accommodation</a>
-      <a href="tours.html">Tours</a>
-      <a href="Contact.html">Contact</a>
+      <ul>
+        <li><a href="accommodation.html">Accommodation</a></li>
+        <li><a href="tours.html">Safari & Tours</a></li>
+        <li><a href="index.html#what-we-offer">What We Offer</a></li>
+      </ul>
     </div>
-    <div class="footer-section">
+
+    <div class="footer-col">
       <h4>Follow Us</h4>
-      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-    </div>
-    <div class="footer-section">
-      <h4>Contact Info</h4>
-      <p>Email: info@tiyeni.com</p>
-      <p>Phone: +263 123 456</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon3"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
   </div>
-  <p class="footer-bottom">© <span id="year"></span> Tiyeni Tours. All rights reserved.</p>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Tiyeni Group — Elegance in every stay
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs.min.js"></script>
 <script src="js/tours.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="js/scroll-3d.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

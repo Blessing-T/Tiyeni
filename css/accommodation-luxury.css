@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Lanston&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +7,27 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Goudy Lanston', serif;
   background: #ffffff;
   color: #333;
   line-height: 1.6;
+}
+
+/* Mobile menu overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
 }
 
 .luxury-header {
@@ -17,7 +36,7 @@ body {
   overflow: hidden;
 }
 
-.luxury-navbar {
+.navbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,14 +45,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+  padding: 1px 20px;
+  background-color: #ffffffa1;
+  position: relative;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+  margin-left: 6px;
+  overflow: hidden;
 }
 
 .navbar-logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .navbar-logo img:hover {
@@ -43,24 +70,23 @@ body {
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 30px;
   margin: 0;
   padding: 0;
+  margin-right: 6px;
 }
 
 .navbar-menu a {
-  color: white;
   text-decoration: none;
+  color: #333333;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   transition: color 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .navbar-menu a:hover,
 .navbar-menu a.active {
-  color: #c9a961;
+  color: #ff7f00;
 }
 
 .luxury-hero {
@@ -98,6 +124,15 @@ body {
   text-align: center;
   color: white;
   animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
@@ -184,9 +219,43 @@ body {
   font-weight: 300;
 }
 
-.luxury-rooms {
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #f8f6f1 0%, #ffffff 100%);
+html {
+  scroll-behavior: smooth;
+  perspective: 1200px;
+}
+
+/* 3D Scroll effects */
+[data-3d] {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+[data-parallax] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+[data-scroll-animate] {
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translateZ(0);
+}
+
+.luxury-room-card,
+.feature-card,
+.amenity-item {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  transition: all 0.3s ease;
+}
+
+.luxury-room-card:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(20px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.luxury-hero {
+  perspective: 1200px;
 }
 
 .rooms-container {
@@ -619,51 +688,75 @@ body {
 }
 
 @media (max-width: 768px) {
-  .luxury-navbar {
-    padding: 15px 20px;
+  .navbar {
+    padding: 8px 12px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    display: none;
   }
 
   .navbar-menu {
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: 50px;
     left: 0;
     right: 0;
     flex-direction: column;
+    background-color: #ffffff;
+    padding: 8px 0;
     gap: 0;
-    background: #1a1a1a;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    z-index: 999;
+    border-top: 1px solid #ddd;
   }
 
   .navbar-menu.active {
-    max-height: 500px;
+    max-height: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-menu li {
-    border-bottom: 1px solid #333;
+    padding: 10px 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar-menu li:last-child {
+    border-bottom: none;
   }
 
   .navbar-menu a {
     display: block;
-    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 400;
   }
 
   .hamburger {
     display: flex;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    gap: 6px;
+    margin-left: auto;
   }
 
   .hamburger span {
-    width: 25px;
-    height: 2px;
-    background: white;
+    width: 24px;
+    height: 3px;
+    background-color: #333333;
+    margin: 4px 0;
     transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
   }
 
   .hero-title {

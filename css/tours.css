@@ -1,7 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Lanston&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Goudy Lanston', serif;
+}
+
+/* Mobile menu overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
 }
 
 .section-title {
@@ -47,6 +67,15 @@
   margin-bottom: 30px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
